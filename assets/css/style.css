@@ -57,6 +57,103 @@ h6 {
     transition: background 0.2s ease-in-out;
 }
 
+/* Project Tabs */
+.portfolio-tabs {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 25px;
+}
+
+.portfolio-tab {
+  border-radius: 999px;
+  border: 1px solid #2487ce;
+  background: transparent;
+  color: #2487ce;
+  padding: 6px 18px;
+  margin: 0 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.portfolio-tab.active {
+  background: #2487ce;
+  color: #fff;
+}
+
+/* Show / hide project sliders */
+.portfolio-project {
+  display: none;
+}
+
+.portfolio-project.active {
+  display: block;
+}
+
+
+/* Center the slider */
+/* Container */
+.mySwiper {
+  width: 100%;
+  max-width: 900px;
+  margin: auto;
+  padding-top: 40px;
+  padding-bottom: 60px;
+  position: relative;
+}
+
+/* All slides */
+.mySwiper .swiper-slide {
+  width: 300px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+
+  /* SMOOTH transition */
+  transition: 
+    transform 0.35s ease,
+    opacity 0.35s ease,
+    z-index 0.35s ease;
+  
+  z-index: 1; /* base layer */
+}
+
+/* Move pagination dots down */
+.mySwiper .swiper-pagination {
+  bottom: -5px !important;
+  z-index: 1000 !important;
+}
+
+/* Center (active) slide */
+.mySwiper .swiper-slide-active {
+  z-index: 20 !important; /* ensure smooth “rise to front” */
+}
+
+.mySwiper .swiper-slide-active img {
+  transform: scale(0.94) translateY(0);
+}
+
+/* Left & Right slides (smaller + lower) */
+.mySwiper .swiper-slide-prev,
+.mySwiper .swiper-slide-next {
+  z-index: 10 !important; /* sit under active, above others */
+}
+
+.mySwiper .swiper-slide-prev img,
+.mySwiper .swiper-slide-next img {
+  transform: scale(0.80) translateY(40px);
+  opacity: 0.8;
+}
+
+/* The image itself */
+.mySwiper img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.25);
+}
+
+
+
 
 /*--------------------------------------------------------------
 # Header
