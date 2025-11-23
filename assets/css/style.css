@@ -176,7 +176,12 @@ h6 {
 #header .profile img {
     margin: 15px auto;
     display: block;
-    width: 120px;
+
+    width: 120px;          /* same as before */
+    height: 140px;         /* NEW — prevents oval */
+    object-fit: cover;     /* NEW — keeps proportions correct */
+
+    border-radius: 50%;    /* ensures perfect circle */
     border: 8px solid #2c2f3f;
 }
 
@@ -458,6 +463,13 @@ section {
     margin-bottom: 0;
 }
 
+.about img {
+    width: 70%;
+    max-width: 260px; /* optional — prevents it from getting too big */
+    height: auto;
+    display: block;
+    margin: 0 auto; /* keeps it centered */
+}
 
 /*--------------------------------------------------------------
 # Facts
